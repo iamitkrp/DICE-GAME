@@ -74,6 +74,7 @@ const MainContainer = styled.main`
   }
   .btns {
     margin-top: 40px;
+    margin-bottom: 40px;
     gap: 10px;
     display: flex;
     flex-direction: column;

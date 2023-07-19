@@ -47,7 +47,7 @@ const NumberSelectorContainer = styled.div`
     font-weight: 700px;
   }
   .error {
-    color: red;
+    color: brown;
   }
 `;
 
