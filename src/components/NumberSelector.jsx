@@ -26,7 +26,7 @@ const NumberSelector = ({
           </Box>
         ))}
       </div>
-      <p>Select Number</p>
+      <p className="label">Select Number</p>
     </NumberSelectorContainer>
   );
 };
@@ -37,28 +37,48 @@ const NumberSelectorContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: end;
+  gap: 10px;
 
   .flex {
     display: flex;
-    gap: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
   }
   p {
-    font-size: 24px;
-    font-weight: 700px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .label {
+    color: var(--muted);
+    font-weight: 600;
   }
   .error {
-    color: brown;
+    min-height: 24px;
+    color: var(--danger);
+    font-size: 14px;
+    font-weight: 600;
   }
 `;
 
 const Box = styled.div`
-  height: 72px;
-  width: 72px;
-  border: 1px solid black;
+  height: 64px;
+  width: 64px;
+  border: 2px solid ${(props) => (props.isSelected ? "var(--accent)" : "#e2e8f0")};
+  background: ${(props) => (props.isSelected ? "rgba(124,58,237,0.08)" : "white")};
+  border-radius: 12px;
   display: grid;
   place-items: center;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
-  background-color: ${(props) => (props.isSelected ? "black" : "white")};
-  color: ${(props) => (!props.isSelected ? "black" : "white")};
+  color: ${(props) => (props.isSelected ? "var(--accent)" : "#0f172a")};
+  cursor: pointer;
+  user-select: none;
+  box-shadow: ${(props) => (props.isSelected ? "0 6px 16px rgba(124,58,237,0.18)" : "0 2px 8px rgba(16,24,40,0.04)")};
+  transform: translateY(0);
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(16, 24, 40, 0.12);
+  }
 `;

@@ -66,20 +66,36 @@ const GamePlay = () => {
 export default GamePlay;
 
 const MainContainer = styled.main`
-  padding-top: 70px;
+  padding-top: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
   .top_section {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: end;
+    gap: 24px;
+    flex-wrap: wrap;
   }
+
   .btns {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    gap: 10px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    gap: 12px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+  }
+
+  @media (max-width: 640px) {
+    .btns {
+      flex-direction: column;
+    }
   }
 `;
