@@ -1,12 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
+  --accent: #7c3aed; /* purple-600 */
+  --accent-2: #4c1d95; /* purple-900 */
+  --danger: #dc2626;
+  --text: #0f172a; /* slate-900 */
+  --muted: #475569; /* slate-600 */
+  --card-bg: #ffffff;
 }
+
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #8d6e63, #fff8e1);
+  min-height: 100vh;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(124, 58, 237, 0.08), transparent),
+    radial-gradient(1000px 500px at 90% 20%, rgba(76, 29, 149, 0.08), transparent),
+    linear-gradient(135deg, #f8fafc, #eef2ff);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#root {
+  padding: 24px;
 }
