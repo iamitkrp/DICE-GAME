@@ -38,6 +38,7 @@ const NumberSelectorContainer = styled.div`
   flex-direction: column;
   align-items: end;
   gap: 10px;
+  width: 100%;
 
   .flex {
     display: flex;
@@ -45,7 +46,7 @@ const NumberSelectorContainer = styled.div`
     flex-wrap: wrap;
   }
   p {
-    font-size: 20px;
+    font-size: clamp(16px, 3.5vw, 20px);
     font-weight: 700;
   }
   .label {
@@ -58,17 +59,28 @@ const NumberSelectorContainer = styled.div`
     font-size: 14px;
     font-weight: 600;
   }
+
+  @media (max-width: 640px) {
+    align-items: center;
+    .flex {
+      justify-content: center;
+    }
+    .label {
+      text-align: center;
+      width: 100%;
+    }
+  }
 `;
 
 const Box = styled.div`
-  height: 64px;
-  width: 64px;
+  height: clamp(48px, 12vw, 64px);
+  width: clamp(48px, 12vw, 64px);
   border: 2px solid ${(props) => (props.isSelected ? "var(--accent)" : "#e2e8f0")};
   background: ${(props) => (props.isSelected ? "rgba(124,58,237,0.08)" : "white")};
   border-radius: 12px;
   display: grid;
   place-items: center;
-  font-size: 22px;
+  font-size: clamp(18px, 5vw, 22px);
   font-weight: 700;
   color: ${(props) => (props.isSelected ? "var(--accent)" : "#0f172a")};
   cursor: pointer;

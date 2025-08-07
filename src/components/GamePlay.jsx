@@ -94,8 +94,15 @@ const MainContainer = styled.main`
   }
 
   @media (max-width: 640px) {
+    .top_section {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 16px;
+    }
     .btns {
       flex-direction: column;
+      width: 100%;
     }
   }
 `;

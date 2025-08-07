@@ -39,7 +39,7 @@ const Container = styled.div`
   }
 
   .content h1 {
-    font-size: 84px;
+    font-size: clamp(44px, 10vw, 84px);
     line-height: 0.95;
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
     -webkit-background-clip: text;
@@ -60,7 +60,7 @@ const Container = styled.div`
       align-items: center;
     }
     .content h1 {
-      font-size: 64px;
+      font-size: clamp(40px, 12vw, 64px);
       white-space: normal;
     }
   }

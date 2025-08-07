@@ -21,7 +21,7 @@ const ScoreContainer = styled.div`
   box-shadow: 0 10px 24px rgba(2, 6, 23, 0.06);
 
   h1 {
-    font-size: 92px;
+    font-size: clamp(56px, 18vw, 92px);
     line-height: 1;
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
     -webkit-background-clip: text;

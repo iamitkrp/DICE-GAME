@@ -31,5 +31,5 @@ img {
 }
 
 #root {
-  padding: 24px;
+  padding: clamp(12px, 3vw, 24px);
 }
