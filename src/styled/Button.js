@@ -25,6 +25,11 @@ export const Button = styled.button`
     outline: 3px solid rgba(124, 58, 237, 0.45);
     outline-offset: 2px;
   }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    min-width: 0;
+  }
 `;
 export const OutlineButton = styled(Button)`
   background: white;

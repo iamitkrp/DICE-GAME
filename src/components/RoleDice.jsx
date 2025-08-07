@@ -45,14 +45,18 @@ const DiceContainer = styled.div`
   }
 
   .dice img {
-    height: 160px;
-    width: 160px;
+    height: clamp(120px, 28vw, 160px);
+    width: clamp(120px, 28vw, 160px);
     filter: drop-shadow(0 12px 18px rgba(2, 6, 23, 0.15));
     animation: ${(p) => (p.isRolling ? roll : "none")} 0.6s ease-in-out;
   }
 
   p {
-    font-size: 18px;
+    font-size: clamp(14px, 3.5vw, 18px);
     color: var(--muted);
+  }
+
+  @media (max-width: 640px) {
+    margin-top: 32px;
   }
 `;
